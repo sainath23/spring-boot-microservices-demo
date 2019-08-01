@@ -29,4 +29,12 @@ public class Rating {
 	public void setRating(Integer rating) {
 		this.rating = rating;
 	}
+
+	@Override
+	public String toString() {
+		return "Rating{" +
+				"movieId=" + movieId +
+				", rating=" + rating +
+				'}';
+	}
 }

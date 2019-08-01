@@ -14,15 +14,10 @@ import com.sainath.ratingsdataservice.model.UserRating;
 @RestController
 @RequestMapping("/ratingsdata")
 public class RatingsDataRestController {
-
-	@GetMapping("/{movieId}")
-	public Rating getRating(@PathVariable("movieId") Integer movieId) {
-		return new Rating(movieId, 4);
-	}
 	
 	@GetMapping("/users/{userId}")
 	public UserRating getRating(@PathVariable("userId") String userId) {
-		List<Rating> ratings = Arrays.asList(new Rating(1, 4), new Rating(2, 3), new Rating(3, 5));
+		List<Rating> ratings = Arrays.asList(new Rating("100", 4), new Rating("550", 3));
 		return new UserRating(ratings);
 	}
 }
